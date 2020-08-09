@@ -3,6 +3,8 @@ public class Story {
     String storyText;
     String choice1;
     String choice2;
+    Story choice1Story;
+    Story choice2Story;
     boolean oneChoiceAvailable;
     boolean storyFinished;
 
@@ -45,6 +47,21 @@ public class Story {
         return this.storyFinished;
     }
 
+    public void setChoice1Story(Story story) {
+        this.choice1Story = story;
+    }
 
+    public void setChoice2Story(Story story) {
+        this.choice2Story = story;
+    }
+
+    public void printStoryAndOptions() {
+        System.out.println(storyText);
+        System.out.println();
+        System.out.println("Choice 1: " + choice1);
+        System.out.println("Choice 2: " + choice2);
+        System.out.println();
+        System.out.print("Choose (1/2): ");
+    }
 
 }
