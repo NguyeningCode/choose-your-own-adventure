@@ -1,26 +1,29 @@
 public class Story {
-    
+    int id;
     String storyText;
     String choice1;
     String choice2;
-    Story choice1Story;
-    Story choice2Story;
+    int choice1Story;
+    int choice2Story;
     boolean oneChoiceAvailable;
     boolean storyFinished;
 
-    public Story(String storyText, String choice1, String choice2) {
+    public Story(int id, String storyText, String choice1, String choice2) {
+        this.id = id;
         this.storyText = storyText;
         this.choice1 = choice1;
         this.choice2 = choice2;
     }
 
-    public Story(String storyText, String choice1) {
+    public Story(int id, String storyText, String choice1) {
+        this.id = id;
         this.storyText = storyText;
         this.choice1 = choice1;
         this.oneChoiceAvailable = true;
     }
 
-    public Story(String storyText) {
+    public Story(int id, String storyText) {
+        this.id = id;
         this.storyText = storyText;
         this.storyFinished = true;
         this.choice1 = "Start Over";
@@ -47,12 +50,20 @@ public class Story {
         return this.storyFinished;
     }
 
-    public void setChoice1Story(Story story) {
-        this.choice1Story = story;
+    public int getChoice1Story() {
+        return this.choice1Story;
+    }
+    
+    public int getChoice2Story() {
+        return this.choice2Story;
     }
 
-    public void setChoice2Story(Story story) {
-        this.choice2Story = story;
+    public void setChoice1Story(int storyId) {
+        this.choice1Story = storyId;
+    }
+
+    public void setChoice2Story(int storyId) {
+        this.choice2Story = storyId;
     }
 
     public void printStoryAndOptions() {

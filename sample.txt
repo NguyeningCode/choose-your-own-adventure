@@ -16,3 +16,15 @@ Part 3....
 2. Quit
 
 Choose (1 | 2): 
+
+
+
+
+Choose (1/2): 9
+That is not a valid input! Please choose between 1 and 2: poop
+That is not a valid input! Please choose between 1 and 2: 2
+
+[load in story]
+
+
+password
